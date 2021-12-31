@@ -1,0 +1,69 @@
+
+<div class="container">
+
+
+
+<h3 style="color: blue">Bio-Graphy Generator</h3>
+
+<div class="my-2">
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name...." class="form-control" (input)="onUpdateName($event)"
+     (input)="onUpdateYear($event)"  />
+</div>
+
+<div class="my-2">
+    <label>Your Skills</label>
+    <input type="text" placeholder="Enter your skills....." class="form-control" (input)="onUpdateSkills($event)" />
+</div>
+
+<div class="my-2">
+    <label>Your Orgination Name</label>
+    <input type="text" placeholder="Enter your company name...." class="form-control"
+        (input)="onUpdateOrgination($event)" />
+</div>
+
+<div class="my-2">
+    <label>Your Collage</label>
+    <input type="text" placeholder="Enter your collage name...." class="form-control"
+        (input)="onUpdateCollage($event)" />
+</div>
+
+<div class="my-2">
+    <label>Degree Complition years</label>
+    <input type="number" placeholder="Enter year when degree compleleted....." class="form-control"
+        (input)="onUpdateDegree($event)" />
+</div>
+
+<div class="my-2">
+    <label>Your Degree in</label>
+    <input type="text" placeholder="Enter your degree in......" class="form-control"
+        (input)="onUpdatePostdegree($event)" />
+</div>
+
+<div class="my-2">
+    <label>Your spacility</label>
+    <input type="text" placeholder="Enter your spacility skills...." class="form-control"
+        (input)="onUpdateSpacility($event)" />
+</div>
+
+<div class="my-2">
+    <label>Award</label>
+    <input type="text" placeholder="Enter your award name....." class="form-control" (input)="onUpdateAward($event)" />
+</div>
+
+<div class="my-2">
+    <label>Your experience </label>
+    <input type="number" placeholder="enter your experience in years....." class="form-control"
+    (input)="onUpdateYears($event)" />
+</div>
+
+<button class="btn my-4 btn-sm btn-primary" (click)="ChangeBiographyCreatedStatus()">Generate Biography</button>
+
+
+<div class="my-2" *ngIf="isBiographyCreated">{{ biographyCreatedStatus }} My name is {{ name }} and I am a Junior {{ skills }} for {{ orgination }}. I am an accomplished coder and
+    programmer, and I enjoy using my skills to contribute to the exciting technological advances that happen every
+    day at {{ orgination }}. I graduated from the {{ collage }} in {{ degree }} with a {{ postdegree }} Degree in
+    {{ spacility }}. While in school, I earned the {{ award }} Award for my exemplary academic
+    performance and leadership skills. I have {{ years }} years of experience on software development.
+</div>
+</div>
